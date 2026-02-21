@@ -33,7 +33,8 @@ let gamePROP = {
   sounds:{
     kill: new Audio("./assets/kill.wav"),
     over:new Audio("./assets/explosion.mp3"),
-    hit:new Audio("./assets/hit.wav")
+    hit:new Audio("./assets/hit.wav"),
+    levelup:new Audio("./assets/levelup.mp3")
   },
   br2: "<br><br>",
   scoreINC: {
@@ -386,6 +387,7 @@ function updateScore(inc) {
     gamePROP.levelGap.currCumulate + gamePROP.levelGap.nxt
   ) {
     gamePROP.level += 1;
+    gamePROP.sounds.levelup.play()
     levelEL.innerHTML = gamePROP.level;
     gamePROP.levelGap.currCumulate += gamePROP.levelGap.nxt;
 
