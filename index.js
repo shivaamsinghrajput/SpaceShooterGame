@@ -103,15 +103,15 @@ let enemyPROP = {
     max: 75,
   },
   spawn: {
-    interval: 2750,
-    defInterval: 2750, //both must be same
+    interval: 2350,
+    defInterval: 2350, //both must be same
     minInterval: 200,
-    difficultyINC: 0.9999,
+    difficultyINC: 0.9995,
     killDiffINC: 0.987,
   },
-  velocityFACTOR: .9,
-  defVelocityFACTOR: .9, //both must be same
-  velocityFactorInc: 1.001,
+  velocityFACTOR: .99,
+  defVelocityFACTOR: .99, //both must be same
+  velocityFactorInc: 1.0011,
   killVelocityFactorInc: 1.007,
   vfMax: 4.9,
 };
