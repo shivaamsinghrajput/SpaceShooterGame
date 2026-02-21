@@ -30,6 +30,11 @@ let gamePROP = {
     "Skill Issue? 😉",
     "One More Round?",
   ],
+  sounds:{
+    kill: new Audio("./assets/kill.wav"),
+    over:new Audio("./assets/explosion.mp3"),
+    hit:new Audio("./assets/hit.wav")
+  },
   br2: "<br><br>",
   scoreINC: {
     hit: 5,
@@ -58,9 +63,9 @@ style1.opacity = "0";
 let opacity = 0.1;
 
 let particlePROP = {
-  friction: 0.99,
+  friction: 0.991,
   countFACTOR: 1, // will decide no. of particles at explosion
-  alphaDECREASE: 0.015,
+  alphaDECREASE: 0.01,
   vf: {
     min: 2.6,
     max: 7.9,
@@ -327,7 +332,9 @@ function animate() {
             player.radius += playerPROP.radius.hitInc;
           }
           updateScore(gamePROP.scoreINC.hit);
+          gamePROP.sounds.hit.play()
 
+          
           gsap.to(enemy, {
             radius: enemy.radius - damage,
           });
@@ -338,6 +345,7 @@ function animate() {
           // update/increase score @kill/removeal of enemy
           incDifficulty((kill = true));
           updateScore(gamePROP.scoreINC.kill);
+          gamePROP.sounds.kill.play()
 
           setTimeout(() => {
             enemies.splice(eIndex, 1);
@@ -522,6 +530,7 @@ function init() {
 
 function gameOver() {
   cancelAnimationFrame(animationID);
+  gamePROP.sounds.over.play()
   // alert(`Game Over @SCORE: ${gamePROP.score} press OK to RESTART`);
   br2 = gamePROP.br2;
   const emote =
