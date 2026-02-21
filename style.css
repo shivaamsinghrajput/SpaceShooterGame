@@ -1,0 +1,127 @@
+:root {
+  --score-margin: 16px;
+  --level-margin: 39px;
+  --left-margin: 12px;
+  --lFontSize: 100px;
+  --sFontSize: 45px;
+  --lColor: #fff;
+  --sColor: #3bff25;
+}
+
+body {
+  margin: 0;
+  overflow-y: hidden;
+}
+
+#canvasContainer {
+  /* margin-top: 0; */
+  /* padding-top: 0; */
+  /* position: absolute; */
+  z-index: -1;
+}
+
+#cvs {
+  background-color: black;
+}
+
+.infoBox {
+  position: fixed;
+  color: white;
+  margin-left: var(--left-margin);
+  /* margin-top: 8px; */
+  user-select: none;
+  /* font-family: 'Courier New', Courier, monospace; */
+  font-weight: 750;
+  font-family: monospace;
+}
+
+#levelBox {
+  margin-top: var(--level-margin);
+}
+
+#scoreBox {
+  margin-top: var(--score-margin);
+}
+
+.textBox {
+  font-size: 20px;
+  /* font-weight: bolder; */
+}
+
+#scoreEL,
+#levelEL {
+  font-size: x-large;
+  /* font-weight: 950; */
+  /* font-family: cursive; */
+}
+
+.DIS {
+  user-select: none;
+  /* color: white; */
+  position: fixed;
+  /* background-color: red; */
+  height: 100%;
+  width: 100%;
+  opacity: 0.00001;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* font-family: "Brush Script MT", cursive; */
+  font-family: "Cascadia Code";
+  /* font-size: 22px; */
+  font-weight: 850;
+}
+
+#levelDIS {
+  font-size: var(--lFontSize);
+  color: var(--lColor);
+}
+
+#scoreDIS {
+  font-size: var(--sFontSize);
+  color: var(--sColor);
+  /* margin-top: 40%; */
+}
+
+#BTNcontainer {
+  display: flex;
+  /* justify-content: center; */
+  justify-content: center;
+}
+
+#initBTN {
+  height: 85px;
+  width: 250px;
+  /* background-color: #00d600; */
+  background-color: #00c8ff;
+  /* background-color: #ffffffeb; */
+  
+  color: #000000;
+  font-family: "Cascadia Code";
+  font-weight: 90;
+  font-size: x-large;
+  position: absolute;
+  z-index: 10;
+
+  border-color: #080808;
+  border-width: 10px;
+  border-style: double;
+  border-radius: 12px;
+  cursor: pointer;
+
+  transition-duration: 250ms;
+
+  user-select: none;
+  margin-top: 28px;
+}
+
+#initBTN:hover{
+  background-color: #24ff24;
+  border-radius: 21px;
+  border-width: 17px;
+  font-weight: 1000;
+}
+
+/* body */

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href='https://fonts.googleapis.com/css?family=Cascadia Code' rel='stylesheet'>
+    <title>Space Shooter Game</title>
+  </head>
+
+  <body>
+    <div id='BTNcontainer'>
+      <button id="initBTN" style="display: none;">Play Again Now</button>
+    </div>
+      
+    <!-- display -->
+    <div class="DIS">
+    <!-- <div class="DIS" style="display: none"> -->
+      <div id="ContainerLevelDIS">
+        <span id="levelDIS">Level 0 <br /><br /><br /></span>
+      </div>
+    </div>
+    <div class="DIS">
+    <!-- <div class="DIS" style="display: none"> -->
+      <span id="scoreDIS"><br /><br /><br /><br />@Score 0</span>
+    </div>
+
+
+    <!-- information box -->
+    <div class="infoBox" id="scoreBox">
+      <span class="textBox">𝕊𝕔𝕠𝕣𝕖: </span><span id="scoreEL">0</span>
+    </div>
+    <div class="infoBox" id="levelBox">
+      <span class="textBox">𝕃𝕖𝕧𝕖𝕝: </span><span id="levelEL">0</span>
+    </div>
+
+
+    <!-- the main play-ground -->
+     <div id="canvasContainer">
+       <canvas id="cvs"></canvas>
+      </div>
+
+    
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
