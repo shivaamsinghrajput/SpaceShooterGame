@@ -32,8 +32,8 @@ let gamePROP = {
   ],
   br2: "<br><br>",
   scoreINC: {
-    hit: 50,
-    kill: 100,
+    hit: 5,
+    kill: 10,
   },
   levelGap: {
     currCumulate: 0,
