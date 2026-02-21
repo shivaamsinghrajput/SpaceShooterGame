@@ -32,8 +32,8 @@ let gamePROP = {
   ],
   br2: "<br><br>",
   scoreINC: {
-    hit: 5,
-    kill: 10,
+    hit: 50,
+    kill: 100,
   },
   levelGap: {
     currCumulate: 0,
@@ -44,7 +44,7 @@ let gamePROP = {
     style0: DISelements[0].style,
     style1: DISelements[1].style,
     startOpacityVal: 0.8,
-    OpacityDec: 0.979, // multiply method
+    OpacityDec: 0.982, // multiply method
   },
 };
 const defNxtLevelGap = gamePROP.levelGap.nxt;
